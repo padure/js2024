@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 5</title>
+</head>
+<body>
+    <script>
+        //ForEach
+        const users = [
+            "Candice Nader",
+            "Leon Okuneva I",
+            "Mrs. Sylvia Jakubowski",
+            "Evan Steuber IV",
+            "Felix Steuber",
+            "Terrence Simonis",
+            "Santiago McGlynn",
+            "Hector Stoltenberg",
+            "Kari Goyette",
+            "Melba Feeney",
+            "Douglas Greenholt",
+            "Lamar Hayes",
+            "Mrs. Corey Goldner",
+            "Benjamin Senger",
+            "Terrell Lakin",
+            "Shelly Jacobi",
+            "Lana Hettinger",
+            "Bethany Tromp",
+            "Olga Johnson",
+            "Guillermo Carroll",
+            "Sandra Wolff",
+            "Richard DuBuque",
+            "Juan Pfeffer",
+            "Dustin Nienow",
+            "Lionel Ledner",
+            "Eva Kautzer",
+            "Ms. Rickey Rippin",
+        ];
+
+        users.forEach( user => console.log(user) );
+        let ol = `<ol>`;
+        users.forEach( user => ol += `<li>${user}</li>`);
+            ol += `</ol>`;
+        document.body.innerHTML = ol;
+    </script>
+</body>
+</html>

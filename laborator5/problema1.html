@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 1</title>
+</head>
+<body>
+    <script>
+        const data = {
+            studenti: [
+                {nume: "John Doe", varsta: 15, note: [8, 9, 5, 6, 9]},
+                {nume: "Jack Doe", varsta: 16, note: [10, 8, 10, 10, 9]},
+                {nume: "Will Doe", varsta: 15, note: [9, 8, 9, 9, 7]},
+                {nume: "Danny Smith", varsta: 15, note: [9, 9, 9, 9, 10, 10]}
+            ]
+        }
+
+        const mediaStudentilorMaiMareDe8 = (data) => {
+            const studenti = data.studenti;
+            const response = [];
+            [...studenti].forEach( student => {
+                const note = student.note;
+                const suma = note.reduce( (val, tot)=> val + tot, 0 );
+                const media = (suma / note.length).toFixed(2);
+                student.media = media;
+                if(media >= 8) response.push(student);
+            });
+            return response;
+        }
+
+        console.log(mediaStudentilorMaiMareDe8(data));
+    </script>
+</body>
+</html>

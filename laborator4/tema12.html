@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 12</title>
+</head>
+<body>
+    <script>
+        const pricies = [123, 34, 21, 111, 1, 0, 98];
+        const cities = ['Cahul', 'Leova', 'Iasi', 'Galati']; 
+        pricies.sort( (a, b) => b - a );
+        cities.sort();
+        console.log(pricies);
+        console.log(cities.reverse());
+        const cars = [
+            {id: 12, nume: "Mercedes", anul: 2020},
+            {id: 13, nume: "Mercedes", anul: 2021},
+            {id: 14, nume: "Opel", anul: 2007},
+            {id: 15, nume: "Dacia", anul: 2022}
+        ];
+
+        cars.sort( (a, b) => a.anul - b.anul );
+
+        console.log(cars);
+    </script>
+</body>
+</html>

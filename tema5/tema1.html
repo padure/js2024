@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1</title>
+    <style>
+        .par{
+            background-color: green;
+            color: white;
+        }
+        .impar{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="construieste">Construieste</button>
+    <div id="numere">
+
+    </div>
+    <script>
+        const construiesteButton = document.querySelector('#construieste');
+        const numereElement = document.querySelector('#numere');
+
+        construiesteButton.addEventListener('click', ()=>{
+            let table = `<table border='1' cellpadding='20'>`;
+                for(let rand = 1; rand <=10; rand++){
+                    table += `<tr>`;
+                    for(let coloana = 1; coloana <=10; coloana++){
+                        let numar = Math.floor(Math.random() * 100 + 1 );
+                        // let styleProps = (numar % 2 === 0) 
+                        //     ? 'background-color: green; color: white'
+                        //     : 'background-color: red; color: white';
+                        // table += `<td style='${styleProps}'>${numar}</td>`;
+                        let className = (numar % 2 === 0) ? 'par':'impar';
+                        table += `<td class='${className}'>${numar}</td>`;
+                    }
+                    table += `</tr>`;
+                }
+                table += `</table>`;
+                numereElement.innerHTML = table;
+        });
+    </script>
+</body>
+</html>

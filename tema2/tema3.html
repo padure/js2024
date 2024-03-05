@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3</title>
+</head>
+<body>
+    <script>
+        // Apeluri
+        const mesaj = () => {
+            console.log('Eu invat JS');
+        } 
+
+        console.log(mesaj());
+
+        const f1 = () => {
+            return () => {
+                console.log('F1');
+            }
+        }
+        
+        f1()();
+
+        const f2 = () => {
+            return () => () => console.log('F2');
+        }
+
+        f2()()();
+
+    </script>
+</body>
+</html>

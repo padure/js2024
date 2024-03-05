@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 6</title>
+</head>
+<body>
+    <script>
+        const orase = [
+            "Metaland",
+            "Asheville",
+            "Krajcikville",
+            "West Guidoborough",
+            "DeSoto",
+            "Israelville",
+            "Tonawanda",
+        ];
+        const city = "DeSotoo";
+        const hasCity = orase.includes(city);
+        console.log(hasCity);
+        const cars = [
+            {id: 12, nume: "Mercedes", anul: 2020},
+            {id: 13, nume: "Mercedes", anul: 2021},
+            {id: 14, nume: "Opel", anul: 2007},
+            {id: 15, nume: "Dacia", anul: 2022}
+        ];
+        const hasCar = cars.find(car => car.nume === "Dacia" );
+        console.log(hasCar);
+    </script>
+</body>
+</html>

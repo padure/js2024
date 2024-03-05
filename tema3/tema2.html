@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            font-size: 82px;
+        }
+        .container > *{
+            flex: 1 1 33.33%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hour">00</div>:
+        <div class="minute">00</div>:
+        <div class="seconds">00</div>
+    </div>
+    <script>
+        const hourElement = document.querySelector('.hour');
+        const minuteElement = document.querySelector('.minute');
+        const secondsElement = document.querySelector('.seconds');
+        const clock = setInterval(() => {
+            const date = new Date();
+            const time = {
+                h: date.getHours(),
+                m: date.getMinutes(),
+                s: date.getSeconds()
+            }    
+            hourElement.textContent = time.h;
+            minuteElement.textContent = time.m;
+            secondsElement.textContent = time.s;
+        }, 1000);
+    </script>
+</body>
+</html>

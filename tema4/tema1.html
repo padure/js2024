@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1</title>
+</head>
+<body>
+    <script>
+        //Destructurizari Array
+        const numbers = [2024, 2025, 2026, 2027];
+        // let nr1 = numbers[0];
+        // let nr2 = numbers[1];
+        let [ nr1, nr2, ...rest] = numbers;
+        console.log(nr1);
+        console.log(nr2);
+        console.log(rest);
+        const fullStack = [
+            ['HTML', 'CSS', 'JS'],
+            ['PHP', 'Node Js', 'Express']
+        ];
+        let [frontend, backend] = fullStack;
+
+        console.log(frontend);
+        console.log(backend);
+
+        const user = [123, 'John Doe', 'email@gmail.com', 'Secret2024'];
+        let [, nume, , password] = user;
+
+        console.log(nume, password);
+
+        const persoana = [
+            "John Doe",
+            2000,
+            "Cahul"
+        ];
+
+        let [name, an = 1999, oras, tara = "RM"] = persoana;
+
+        console.log(name);
+        console.log(an);
+        console.log(oras);
+        console.log(tara);
+
+    </script>
+</body>
+</html>

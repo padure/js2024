@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 8</title>
+    <style>
+        #map{
+            width: 800px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cell{
+            width: 25%;
+            height: 150px;
+            background-color: brown;
+            outline: 1px solid white;
+        }
+        .yellow{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        const map = document.getElementById('map');
+        const change = (cell) => {
+            // Toate celulele
+            const cells = document.querySelectorAll('.cell');
+            // Sters clasa yellow de la fiecare celuala
+            cells.forEach( data => data.classList.remove('yellow') );
+            //Am atasat clasa catre elementul selectat
+            cell.classList.add('yellow');
+        }
+        for( let i = 1; i <= 16; i++ ){
+            map.innerHTML += `<div class='cell' onclick="change(this)"></div>`;
+        }
+    </script>
+</body>
+</html>

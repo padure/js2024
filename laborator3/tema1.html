@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 1</title>
+</head>
+<body>
+    <script>
+        // Instructiuni repetitive
+        const orase = ['Cahul', 'Cantemir', 'Leova', 'Hancesti', 'Ialoveni'];
+        const oras = {
+            "nume" : "Cahul",
+            "tara" : "RM",
+            "populatie" : 30000,
+            "zona" : "sud",
+            "densitate" : 3.58
+        }
+        // For
+        // let ol = `<ol>`;
+        // for(let i = 0; i <orase.length; i++ ){
+        //     ol += `<li>${orase[i]}</li>`;
+        // }
+        // ol+= `</ol>`;
+        // document.body.innerHTML = ol;
+        // For IN
+        for (const key in oras) {
+            console.log(key, oras[key]);
+        }
+        // FOR OF
+        let ol = `<ol>`;
+        for (const element of orase) {
+            ol += `<li>${element}</li>`;
+        }
+        ol += `</ol>`;
+        document.body.innerHTML = ol;
+    </script>
+</body>
+</html>

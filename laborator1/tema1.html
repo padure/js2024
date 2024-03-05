@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laborator 1</title>
+</head>
+
+<body>
+    <script>
+        while (confirm('Dorsti sa incerci?')) {
+            let userNumber = prompt("Introduceti un numar din intervalul 1 - 10!");
+            let randomNumber = Math.floor(Math.random() * 10 + 1);
+            let isEqual = userNumber == randomNumber;
+            if (isEqual) {
+                console.log(`Felicitari ai ghicit numarul: ${randomNumber}`);
+            } else {
+                console.log(`Din pacate nu ai ghicit numarul. 
+            Numarul introdus este: ${userNumber}, insa numarul aleator este: ${randomNumber}`);
+            }
+            if( userNumber > randomNumber ) {
+                console.log('Numarul introdus este mai mare!');
+            } else{
+                console.log('Numarul introdus este mai mic!');
+            }
+        }
+    </script>
+</body>
+
+</html>

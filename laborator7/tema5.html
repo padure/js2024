@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 5</title>
+</head>
+<body>
+    <div id="tari">
+        <div>Madagascar</div>
+        <div>Grenada</div>
+        <div>Paraguay</div>
+        <div>Bolivia</div>
+        <div>Bhutan</div>
+        <div>Venezuela</div>
+        <div>Denmark</div>
+        <div>Timor-Leste</div>
+        <div>Lebanon</div>
+        <div>Mongolia</div>
+        <div>Antigua and Barbuda</div>
+        <div>Mauritius</div>
+    </div>
+    <script>
+        const tariElements = document.querySelectorAll('#tari > div');
+        [...tariElements].map( tara => {
+            if(tara.textContent.toLowerCase().includes('a')){
+                tara.remove();
+            }
+        });
+    </script>
+</body>
+</html>

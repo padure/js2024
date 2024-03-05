@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 4 </title>
+</head>
+<body>
+    <script>
+        const data = {
+            produse : [
+                {nume: "Chips", categorie: "Beauty", pret: 299.00},
+                {nume: "Keyboard", categorie: "Beauty", pret: 513.00},
+                {nume: "Chips", categorie: "Beauty", pret: 900.00},
+                {nume: "Salad", categorie: "Clothing", pret: 79.00},
+                {nume: "Shirt", categorie: "Clothing", pret: 268.00},
+                {nume: "Sausages", categorie: "Clothing", pret: 261.00},
+                {nume: "Chair", categorie: "Clothing", pret: 162.00},
+                {nume: "Gloves", categorie: "Sports", pret: 807.00},
+                {nume: "Table", categorie: "Kids", pret: 64.00},
+                {nume: "Towels", categorie: "Kids", pret: 790.00}
+            ]
+        }
+
+        const pretMinimMaxim = ({produse}) => {
+            const categorii = [];
+            produse.forEach( produs => {
+                const subProduse = produse.filter( subp => subp.categorie === produs.categorie );
+                const preturi = subProduse.map( ({pret}) => pret);
+                const min = Math.min(...preturi);              
+                const max = Math.max(...preturi);
+                categorii.push({nume: subProduse[0].categorie, min: min, max: max});              
+            });
+            const nume = [];
+            const response = [];
+            categorii.forEach( obj => {
+                if( !nume.includes(obj.nume) ){
+                    response.push(obj);
+                    nume.push(obj.nume);
+                }
+            } );
+            return response;
+        }
+
+        console.log(pretMinimMaxim(data));
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4</title>
+</head>
+<body>
+    <button id="modifica">Modifica</button>
+    <p id="text">
+        Soluta laudantium aut. Autem quas eos non impedit eos quidem. Minima animi ut.
+    </p>
+    <script>
+        const text = document.querySelector('#text');
+        const modifica = document.querySelector('#modifica');
+
+        modifica.addEventListener('click', ()=> {
+            const str = prompt('Dati un text:');
+            text.textContent = text.textContent.replaceAll(/aut/gi, str);
+        });
+    </script>
+</body>
+</html>

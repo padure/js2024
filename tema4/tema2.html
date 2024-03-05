@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2</title>
+</head>
+<body>
+    <script>
+        //Destructurizari obiecte
+        const dreptunghi = {
+            latime: 258,
+            inaltime: 158,
+            culoare: 'red'
+        }
+
+        let {culoare, masura = 'cm'} = dreptunghi;
+
+        console.log(culoare);
+        console.log(masura);
+
+        let dreptunghi_nou = { ...dreptunghi, perimetru: 832 }
+
+        console.log(dreptunghi_nou);
+
+        let {latime: l, inaltime: i, culoare: c} = dreptunghi;
+
+        console.log(l, i, c);
+    </script>
+</body>
+</html>

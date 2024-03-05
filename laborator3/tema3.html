@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3</title>
+</head>
+<body>
+    <script>
+        //Eu invat
+        const sir = prompt("Introduceti un sir de caractere!");
+        const raport = [];
+        let numar = 0;
+        for(let i = 0; i < sir.length; i++){
+            let litera = sir[i];
+            for(let j = 0; j < sir.length; j++){
+                if(sir[j] == litera){
+                    numar++;
+                }
+            }
+            raport.push({"litera": sir[i].toLowerCase(), "numar": numar});
+            numar = 0;
+        }
+        const raspuns = [];
+        for (const element of raport) {
+            const data = raspuns.filter( litera => litera.litera == element.litera );
+            if(!data.length && element.litera != " "){
+                raspuns.push(element);
+            }    
+        }
+        console.log(sir);        
+        console.log(raspuns);
+    </script>
+</body>
+</html>

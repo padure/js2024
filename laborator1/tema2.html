@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2</title>
+</head>
+<body>
+    <script>
+        //Operatori
+        // Operatori de comparatie
+        let num1 = 10;
+        let num2 = 5;
+
+        console.log( num1 == num2 ); // Egalitate
+        console.log( num1 === num2 ); // Identic, valoare si tip
+        console.log( num1 > num2 );
+        console.log( num1 < num2 );
+        console.log( num1 <= num2 );
+        console.log( num1 >= num2 );
+        console.log( num1 != num2 ); // 
+        console.log( num1 !== num2 );
+        // Operatorii logici
+        let conditie1 = true; // 1
+        let conditie2 = false; // 0
+        let conditie3 = true; // 1
+
+        console.log( conditie1 && conditie2 ); // 1 * 0 = 0 false
+        console.log( conditie1 || conditie2 ); // 1 + 0 = 1 true
+        console.log( !conditie1 ); // false - 0
+        console.log( conditie1 || conditie2 || conditie3 && !conditie2 ); // true
+        // Operatorul Ternar | ? :
+        let varsta = 17;
+        let isAdult = varsta > 18 ? true : false;
+        let role = "admin";
+        let hasAccess = role === "admin" ? true : false;
+        let numar = 54;
+        let tipNumar = 54 % 2 === 0 ? 'par' : 'impar';
+        console.log(tipNumar);
+        console.log(isAdult);
+        // Operatorul Nullish - ?? -> null, undefined, 0, false
+        let valoare1 = null;
+        let valoare2 = "John Doe";
+        let rezultat = valoare1 ?? valoare2;
+        let rezultat2 = valoare1 ?? valoare1 ?? valoare1 ?? "Rezultat";
+        let rezultat3 = valoare1 ?? valoare2 ?? valoare1 ?? "Rezultat";
+        console.log(rezultat);
+        // Operatorul sau
+        let data1 = null;
+        let data2 = 2024;
+
+        let response = data1 || data2;
+
+        console.log( response);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 7</title>
+</head>
+<body>
+    <button onclick="adauga()">Adauga</button>
+    <div id="orase"></div>
+    <script>
+        let oras = document.getElementById('orase');
+        const adauga = () => {
+            let oras = prompt('Scrie numele unui oras!');
+            if(oras){
+                orase.innerHTML += `<div>${oras}</div>`;
+            }    
+        }
+    </script>
+</body>
+</html>

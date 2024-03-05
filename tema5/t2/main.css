@@ -1,0 +1,40 @@
+.carousel{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+.carousel-container{
+    display: flex;
+    overflow: hidden;   
+}
+.carousel-container img{
+    width: 600px;
+    height: 450px;
+    object-fit: cover;
+    transition: all 1s ease;
+}
+.prev,
+.next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.prev:hover,
+.next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}

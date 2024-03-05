@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3</title>
+</head>
+<body>
+    <script>
+        // Filter
+        const colors = ['red', 'blue', 'yellow', 'green', 'orange', 'bluered', 'black'];
+        const colorsNewArr1 = colors.filter( color => color[0] != 'b');
+        // const colorsNewArr2 = colors.filter( color => color.length > 5);
+        const colorsNewArr2 = colors.filter( color => color.length >= 4 && color.length <=6 );
+
+        console.log(colorsNewArr2);
+    </script>
+</body>
+</html>

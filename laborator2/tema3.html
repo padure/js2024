@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3</title>
+</head>
+<body>
+    <script>
+        let msg = ``;
+        let userName = prompt('Introdu numele tau');
+        if( userName == null || userName == '') {
+            msg = `Introdu o valoare valida!`;
+        } else{
+            msg += `Salut, ${userName}. `;
+            msg += `Bine ai venit pe platforma noastra!`;
+        }
+        alert(msg);
+    </script>
+</body>
+</html>

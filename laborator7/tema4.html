@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4</title>
+</head>
+<body>
+    <div class="persoane">
+        <div class="persoana">Pauline Koepp</div>
+        <div class="persoana">Josephine Johnston</div>
+        <div class="persoana">Felipe Lowe</div>
+        <div class="persoana">Teresa Purdy</div>
+        <div class="persoana">Dr. Larry Greenfelder</div>
+        <div class="persoana">Woodrow Veum</div>
+        <div class="persoana">Mrs. Faith McGlynn</div>
+        <div class="persoana">Ricardo Hilpert</div>
+    </div>
+
+    <script>
+        const persoanaElements = document.querySelectorAll('.persoana');
+        [...persoanaElements].map( persoana => {
+            // persoana.className = "test";
+            // persoana.classList.add('test');
+            // persoana.classList.add('test', 'red');
+            // persoana.classList.remove('persoana');
+            // persoana.style.color = "red";
+            // persoana.style.backgroundColor = "gold";
+            // persoana.style.border = "1px solid brown";
+            // persoana.style.margin = "3px";
+            // persoana.style.padding = "3px";
+            // if( persoana.textContent.length >= 15 ){
+            //     persoana.style.color = "red";
+            // }
+            persoana.style.color = (persoana.textContent.length >= 15) ? "red" : "blue"; 
+        });
+    </script>
+</body>
+</html>

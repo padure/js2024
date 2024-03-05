@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 3</title>
+</head>
+<body>
+    <script>
+        const data = {
+            carti: [
+                {titlu: "CSS3", autor: "Laverne Wehner", an: 2020},
+                {titlu: "HTML", autor: "Mr. Danny Lakin", an: 2021},
+                {titlu: "JS", autor: "Robin Lowe IV", an: 2000},
+                {titlu: "Node JS", autor: "Devin Will", an: 2011},
+                {titlu: "MongoDB", autor: "Cody Schamberger", an: 2020}
+            ]
+        }
+        const autori = ({carti}) => {
+            return carti.map( carte => carte.autor ).sort();
+        }
+
+        console.log(autori(data));
+    </script>
+</body>
+</html>

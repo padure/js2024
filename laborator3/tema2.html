@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarcina practica 7</title>
+</head>
+<body>
+    <script>
+        //Creați un program care să genereze un număr aleatoriu între 1 și 1000 și să returneze cel mai apropiat număr prim mai mare decât acesta.
+        let numarAliatoriu = Math.floor( Math.random() * 1000 + 1 );
+        let isPrim = false;
+        let numar = numarAliatoriu + 1;
+        while (!isPrim) {
+            let divizori = 0;
+            for(let i = 1; i <= parseInt(numar / 2); i++) {
+                if(numar % i == 0){
+                    divizori++;
+                }
+            }
+            if(divizori == 1){
+                isPrim = true;
+                break;
+            }
+            numar++;
+        }
+        console.log(`Numarul: ${numarAliatoriu} are urmatorul numar prim: ${numar}`);
+    </script>
+</body>
+</html>

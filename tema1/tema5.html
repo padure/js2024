@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 5</title>
+</head>
+<body>
+    <script>
+        // Tipuri de date
+        // Number
+        let numar = 78;
+        let suma = 78.36;
+        let rest = -258;
+        console.log( typeof rest );
+        // String
+        let litera = 'A';
+        let anul = "2024";
+        let nume = 'Ion';
+        let oras = "Cahul";
+        let tara = `USA ${oras}`;
+        let info = nume + " " + oras;
+        let rez = anul + numar;
+        console.log( typeof tara);
+        // Boolean
+        let isAdmin = true;
+        let hasAccess = false;
+        console.log( typeof hasAccess );
+        // Array 
+        //vechi
+        let ani = new Array(2020, 2021, 2022, 2023, 2024);
+        let numere = [8, 7, 6, 5, 4, 3, 2, 1, 'BOOOM', [], {}];
+        let user = [
+            'John Doe',
+            37,
+            'jd@gmail.com',
+            [
+                'HTML', 'CSS', 'JS', 'SQL'
+            ],
+            1978
+        ];
+        console.log( typeof numere );
+        console.log( user[3][1] );
+        //Object
+        const persoana = {
+            nume: "John",
+            prenume: "Doe",
+            varsta: 28,
+            adresa: {
+                oras: "Cahul",
+                tara: "RM"
+            }
+        }
+        console.log( typeof persoana );
+        console.log( persoana['nume'] );
+        console.log( persoana.nume );
+        console.log( persoana.adresa.oras );
+        // Undefined
+        let gen;
+        let email;
+        console.log( typeof gen );
+        // Null
+        let conexiune = null;
+        console.log(conexiune);
+        // NaN
+        let raspuns = "Ion" / 8;
+        console.log( typeof raspuns );
+        //Function
+        function diferenta(a, b) {
+            return a - b;
+        }
+        //Arrow function
+        const produs = (a, b) => a * b;
+        
+        console.log( typeof produs );
+        console.log( typeof diferenta );
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3</title>
+</head>
+<body>
+    <ul id="orase">
+        <li>West Samirport</li>
+        <li>Vonshire</li>
+        <li>South Eldred</li>
+        <li>Lindseytown</li>
+        <li>O'Reillyville</li>
+        <li>North Tess</li>
+    </ul>
+    <script>
+        const liElements = document.querySelectorAll('#orase > li');
+        //Constructor
+        // Array.from(liElements).map( oras => console.log(oras.innerText) );
+        //Destructurizare
+        [...liElements].map( oras => console.log(oras.textContent) );
+        [...liElements].map( (oras, index) => {
+            oras.innerHTML = `<b>Oras: </b>${oras.textContent} ${index + 1}`
+        });
+        // console.log(liElements);
+    </script>
+</body>
+</html>

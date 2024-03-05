@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 4</title>
+</head>
+<body>
+    <script>
+        const numere = [23, 42, 13, 23, 45, 46, 7, 1, 23, 14];
+        let suma = 0, sumaPare = 0;
+        for (const numar of numere) {
+            suma+= numar;
+            if (numar % 2 == 0) sumaPare += numar;
+        }
+
+        console.log(`Suma numerelor este: ${suma}`);
+        console.log(`Suma numerelor pare este: ${sumaPare}`);
+        console.log(`Numarul elementelor este: ${numere.length}`);
+    </script>
+</body>
+</html>
