@@ -1,0 +1,164 @@
+[
+    {
+        "id": 1,
+        "nume": "Căști wireless",
+        "pret": 250,
+        "descriere": "Căști Bluetooth cu sunet de calitate și autonomie de 6 ore."
+    },
+    {
+        "id": 2,
+        "nume": "Tastatură mecanică",
+        "pret": 300,
+        "descriere": "Tastatură ergonomică cu switch-uri mecanice pentru o experiență de scriere mai plăcută."
+    },
+    {
+        "id": 3,
+        "nume": "Telefon mobil",
+        "pret": 500,
+        "descriere": "Telefon smartphone cu ecran AMOLED și cameră triplă de 12MP."
+    },
+    {
+        "id": 4,
+        "nume": "Laptop",
+        "pret": 700,
+        "descriere": "Laptop portabil cu procesor Intel Core i5 și ecran Full HD."
+    },
+    {
+        "id": 5,
+        "nume": "Smartwatch",
+        "pret": 200,
+        "descriere": "Ceas inteligent cu monitorizare a activității fizice și notificări."
+    },
+    {
+        "id": 6,
+        "nume": "Imprimată laser",
+        "pret": 400,
+        "descriere": "Imprimată multifuncțională laser pentru acasă și birou."
+    },
+    {
+        "id": 7,
+        "nume": "Cameră video",
+        "pret": 600,
+        "descriere": "Cameră video digitală 4K cu stabilizare de imagine."
+    },
+    {
+        "id": 8,
+        "nume": "Aspirator robot",
+        "pret": 350,
+        "descriere": "Aspirator robot inteligent pentru curățarea automată a casei."
+    },
+    {
+        "id": 9,
+        "nume": "Dronă",
+        "pret": 800,
+        "descriere": "Dronă aeriană cu cameră 4K pentru fotografii și filmări aeriene."
+    },
+    {
+        "id": 10,
+        "nume": "Tabletă",
+        "pret": 250,
+        "descriere": "Tabletă Android cu ecran de 10 inch și procesor quad-core."
+    },
+    {
+        "id": 11,
+        "nume": "Boxe Bluetooth",
+        "pret": 150,
+        "descriere": "Boxe portabile Bluetooth pentru muzică stereo de calitate."
+    },
+    {
+        "id": 12,
+        "nume": "Cititor ebook",
+        "pret": 100,
+        "descriere": "Cititor ebook cu ecran e-ink pentru o lectură confortabilă."
+    },
+    {
+        "id": 13,
+        "nume": "Cărți",
+        "pret": 20,
+        "descriere": "Varietate de cărți din diverse genuri literare."
+    },
+    {
+        "id": 14,
+        "nume": "Jocuri video",
+        "pret": 50,
+        "descriere": "Jocuri video pentru diverse platforme (PC, console)."
+    },
+    {
+        "id": 15,
+        "nume": "Filme DVD",
+        "pret": 15,
+        "descriere": "Filme DVD din diverse genuri cinematografice."
+    },
+    {
+        "id": 16,
+        "nume": "Haine",
+        "pret": 30,
+        "descriere": "Varietate de haine pentru bărbați, femei și copii."
+    },
+    {
+        "id": 17,
+        "nume": "Încălțăminte",
+        "pret": 40,
+        "descriere": "Varietate de încălțăminte pentru bărbați, femei și copii."
+    },
+    {
+        "id": 18,
+        "nume": "Televizor Smart",
+        "pret": 800,
+        "descriere": "Televizor Smart LED cu diagonala de 55 inch și rezoluție 4K."
+    },
+    {
+        "id": 19,
+        "nume": " aparat de ras electric",
+        "pret": 100,
+        "descriere": "Aparat de ras electric pentru o radere confortabilă și uscată."
+    },
+    {
+        "id": 20,
+        "nume": "Trusă de scule",
+        "pret": 150,
+        "descriere": "Trusă completă cu unelte de bază pentru diverse reparații."
+    },
+    {
+        "id": 21,
+        "nume": "Cafetieră",
+        "pret": 50,
+        "descriere": "Cafetieră electrică pentru prepararea rapidă a cafelei."
+    },
+    {
+        "id": 22,
+        "nume": "Bicicletă montană",
+        "pret": 400,
+        "descriere": "Bicicletă montană cu 21 de viteze pentru trasee off-road."
+    },
+    {
+        "id": 23,
+        "nume": "Stație meteo",
+        "pret": 70,
+        "descriere": "Stație meteo digitală pentru monitorizarea temperaturii, umidității și presiunii atmosferice."
+    },
+    {
+        "id": 24,
+        "nume": "Dulap depozitare",
+        "pret": 200,
+        "descriere": "Dulap practic pentru organizarea și depozitarea obiectelor."
+    },
+    {
+        "id": 25,
+        "nume": "Jocuri de societate",
+        "pret": 30,
+        "descriere": "Varietate de jocuri de societate pentru distracție în familie sau cu prietenii."
+    },
+    {
+        "id": 26,
+        "nume": "Produse cosmetice",
+        "pret": 58,
+        "descriere": "Gamă variată de produse cosmetice pentru îngrijirea personală."
+    },
+    {
+        "id": 27,
+        "nume": "Articole sportive",
+        "pret": 98,
+        "descriere": "Echipament și accesorii pentru diverse sporturi (fotbal, baschet, tenis etc.)."
+    }
+]

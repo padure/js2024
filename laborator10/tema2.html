@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 2</title>
+</head>
+<body>
+    <script >
+        const f1 = async () => {
+            await setTimeout( () => console.log("F1"), 1000 );
+        }
+        const f2 = async () => {
+            await setTimeout( () => console.log("F2"), 2000 );
+        }
+        const f3 = async () => {
+            await setTimeout( () => console.log("F3"), 3000 );
+        }
+        const main = async () => {
+            await f1();
+            await f2();
+            await f3();
+        }
+        main();
+
+    </script>
+</body>
+</html>
