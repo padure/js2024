@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "nume": "Invata HTML si CSS de la zero",
+    "autor": "John Doe",
+    "pagini": 319,
+    "an": 2023
+  },
+  {
+    "id": 1,
+    "nume": "Inavat PHP",
+    "autor": "John Doe",
+    "pagini": 238,
+    "an": 2020
+  },
+  {
+    "id": 5,
+    "nume": "Inavat MVC",
+    "autor": "Will Smith",
+    "pagini": 201,
+    "an": 2024
+  }
+]
