@@ -96,11 +96,9 @@ app.put("/book/:id", (req, res) => {
             return;
         }
         const books = JSON.parse(data);
-        const book = books.filter(book => book.id == id);
         const oldBooks = books.filter(book => book.id != id);
-        const myBook = book.pop();
         const newBook = {
-            "id" : myBook.id,
+            "id" : id,
             "nume" : req.body.nume,
             "autor" : req.body.autor,
             "pagini" : req.body.pagini,
