@@ -44,7 +44,49 @@ app.post("/books/create", (req, res)=>{
         });
     });
 });
+//Afiseaza cartea dupa ID
+app.get("/book/:id", (req, res) => {
+    const id = req.params.id;
+    fs.readFile(URL_BOOKS, "utf8", (err, data)=>{
+        if(err){
+            console.error(err);
+            res.status(500).send("A aparut o eroare");
+            return;
+        }
+        const books = JSON.parse(data);
+        const book = books.filter( book => {
+            return book.id == id;
+        });
+        res.json(book);
+    });
+});
+//Sterge o carte
+app.delete("/book/:id", (req, res) => {
+    const id = req.params.id;
+    fs.readFile(URL_BOOKS, "utf8", (err, data)=>{
+        if(err){
+            console.error(err);
+            res.status(500).send("A aparut o eroare");
+            return;
+        }
+        const books = JSON.parse(data);
+        const newBooksList = books.filter( book => {
+            return book.id != id;
+        });
+        fs.writeFile(URL_BOOKS, JSON.stringify(newBooksList, null, 2), err => {
+            if(err){
+                console.error(err);
+                res.status(500).send("A aparut o eroare");
+                return;
+            }
+            res.send("Cartea a fost stearsa cu succes!");
+        });
+    });
+});
+//Actualizare date carte
+app.put("/book/:id", (req, res) => {
 
+});
 app.listen(PORT, () => {
     console.log(`Serverul ruleaza la adresa: http://localhost:${PORT}`);
 });
