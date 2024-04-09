@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const { v4: uuidv4 } = require('uuid');
 
 const app = express();
 const PORT = 3000;
@@ -31,6 +32,7 @@ app.post("/books/create", (req, res)=>{
         }
         const books = JSON.parse(data);
         const newBook = req.body;
+        newBook.id = uuidv4();
         books.push(newBook);
         fs.writeFile(URL_BOOKS, JSON.stringify(books, null, 2), err => {
             if(err){

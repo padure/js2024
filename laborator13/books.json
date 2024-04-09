@@ -1,23 +1,16 @@
 [
   {
-    "id": 1,
-    "nume": "Invata HTML si CSS de la zero",
-    "autor": "John Doe",
-    "pagini": 319,
-    "an": 2023
-  },
-  {
-    "id": 1,
-    "nume": "Inavat PHP",
-    "autor": "John Doe",
-    "pagini": 238,
-    "an": 2020
-  },
-  {
-    "id": 5,
     "nume": "Inavat MVC",
     "autor": "Will Smith",
     "pagini": 201,
-    "an": 2024
+    "an": 2024,
+    "id": "4b4a5b0e-6fc6-466d-9ed0-bf33016dc33d"
+  },
+  {
+    "nume": "Inavat CSS3",
+    "autor": "Will Smith",
+    "pagini": 201,
+    "an": 2021,
+    "id": "cb04b448-33bd-4e84-a8a2-7589ce3faedd"
   }
 ]
