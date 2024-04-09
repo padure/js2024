@@ -22,7 +22,7 @@
     <!-- Main -->
     <main>
         <div class="container">
-            <h5>Lista cartilor</h5>
+            <h5 class="my-4">Lista cartilor</h5>
             <table class="table table-dark table-bordered">
                 <thead>
                     <tr>
@@ -39,7 +39,25 @@
     </main>
     <!-- Scripts -->
     <script type="module">
-
+        const tableElement = document.querySelector("#books");
+        const getBooks = async () => {
+            const response = await fetch('http://localhost:3000/books');
+            const books = await response.json();
+            return books;
+        }
+        const main = async () => {
+            const books = await getBooks();
+            books.map( book => {
+                tableElement.innerHTML += `<tr>
+                    <td>${book.id}</td>
+                    <td>${book.nume}</td>
+                    <td>${book.autor}</td>
+                    <td>${book.pagini}</td>
+                    <td>${book.an}</td>
+                </tr>`; 
+            });
+        }
+        main();     
     </script>
 </body>
 

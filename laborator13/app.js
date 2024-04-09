@@ -2,12 +2,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
 const URL_BOOKS = 'books.json';
 
+//Middleware
 app.use(bodyParser.json());
+app.use(cors());
 
 //Routes
 //Afisarea cartilor
