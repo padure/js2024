@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 //Routes
 //Afisarea cartilor
 app.get('/books', (req, res) => {
-    fs.readFile(URL_BOOKS, "utf8", (err, data)=>{
-        if(err){
+    fs.readFile(URL_BOOKS, "utf8", (err, data) => {
+        if (err) {
             console.error(err);
             res.status(500).send("A aparut o eroare");
             return;
@@ -23,9 +23,9 @@ app.get('/books', (req, res) => {
     });
 });
 //Adaugarea unei carti
-app.post("/books/create", (req, res)=>{
-    fs.readFile(URL_BOOKS, "utf8", (err, data)=>{
-        if(err){
+app.post("/books/create", (req, res) => {
+    fs.readFile(URL_BOOKS, "utf8", (err, data) => {
+        if (err) {
             console.error(err);
             res.status(500).send("A aparut o eroare");
             return;
@@ -35,7 +35,7 @@ app.post("/books/create", (req, res)=>{
         newBook.id = uuidv4();
         books.push(newBook);
         fs.writeFile(URL_BOOKS, JSON.stringify(books, null, 2), err => {
-            if(err){
+            if (err) {
                 console.error(err);
                 res.status(500).send("A aparut o eroare");
                 return;
@@ -47,14 +47,14 @@ app.post("/books/create", (req, res)=>{
 //Afiseaza cartea dupa ID
 app.get("/book/:id", (req, res) => {
     const id = req.params.id;
-    fs.readFile(URL_BOOKS, "utf8", (err, data)=>{
-        if(err){
+    fs.readFile(URL_BOOKS, "utf8", (err, data) => {
+        if (err) {
             console.error(err);
             res.status(500).send("A aparut o eroare");
             return;
         }
         const books = JSON.parse(data);
-        const book = books.filter( book => {
+        const book = books.filter(book => {
             return book.id == id;
         });
         res.json(book);
@@ -63,18 +63,18 @@ app.get("/book/:id", (req, res) => {
 //Sterge o carte
 app.delete("/book/:id", (req, res) => {
     const id = req.params.id;
-    fs.readFile(URL_BOOKS, "utf8", (err, data)=>{
-        if(err){
+    fs.readFile(URL_BOOKS, "utf8", (err, data) => {
+        if (err) {
             console.error(err);
             res.status(500).send("A aparut o eroare");
             return;
         }
         const books = JSON.parse(data);
-        const newBooksList = books.filter( book => {
+        const newBooksList = books.filter(book => {
             return book.id != id;
         });
         fs.writeFile(URL_BOOKS, JSON.stringify(newBooksList, null, 2), err => {
-            if(err){
+            if (err) {
                 console.error(err);
                 res.status(500).send("A aparut o eroare");
                 return;
@@ -85,7 +85,34 @@ app.delete("/book/:id", (req, res) => {
 });
 //Actualizare date carte
 app.put("/book/:id", (req, res) => {
-
+    const id = req.params.id;
+    fs.readFile(URL_BOOKS, "utf8", (err, data) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send("A aparut o eroare");
+            return;
+        }
+        const books = JSON.parse(data);
+        const book = books.filter(book => book.id == id);
+        const oldBooks = books.filter(book => book.id != id);
+        const myBook = book.pop();
+        const newBook = {
+            "id" : myBook.id,
+            "nume" : req.body.nume,
+            "autor" : req.body.autor,
+            "pagini" : req.body.pagini,
+            "an" : req.body.an
+        }
+        oldBooks.push(newBook);
+        fs.writeFile(URL_BOOKS, JSON.stringify(oldBooks, null, 2), err => {
+            if (err) {
+                console.error(err);
+                res.status(500).send("A aparut o eroare");
+                return;
+            }
+            res.send("Cartea a fost actualizata cu succes!");
+        });
+    });
 });
 app.listen(PORT, () => {
     console.log(`Serverul ruleaza la adresa: http://localhost:${PORT}`);

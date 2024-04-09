@@ -5,5 +5,19 @@
     "pagini": 201,
     "an": 2021,
     "id": "cb04b448-33bd-4e84-a8a2-7589ce3faedd"
+  },
+  {
+    "nume": "Inavat C#",
+    "autor": "Will Smith",
+    "pagini": 215,
+    "an": 2020,
+    "id": "9b19f5c4-b30f-4ce1-82de-ec0af43a5617"
+  },
+  {
+    "id": "93f0866f-52b7-480e-9789-67c9875bc820",
+    "nume": "Inavat Engleza",
+    "autor": "Will Smith",
+    "pagini": 254,
+    "an": 2015
   }
 ]
