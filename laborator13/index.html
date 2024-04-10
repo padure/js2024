@@ -18,8 +18,8 @@
                     <a class="nav-link" href="create.html">Create</a>
                 </div>
             </div>
-            <form class="d-flex" role="search" id="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" role="search" id="search" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
@@ -45,13 +45,14 @@
     <!-- Scripts -->
     <script type="module">
         const tableElement = document.querySelector("#books");
+        const searchFormElement = document.querySelector("#search");
         const getBooks = async () => {
             const response = await fetch('http://localhost:3000/books');
             const books = await response.json();
             return books;
         }
-        const main = async () => {
-            const books = await getBooks();
+        const updateContent = (books) => {
+            tableElement.innerHTML = "";
             books.map((book, index) => {
                 tableElement.innerHTML += `<tr>
                     <td>${index + 1}</td>
@@ -62,7 +63,20 @@
                 </tr>`;
             });
         }
-        main();     
+        const main = async () => {
+            const books = await getBooks();
+            updateContent(books);
+        }
+        main();
+        searchFormElement.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const text = e.target.query.value;
+            const books = await getBooks();
+            const filtredBooks = await books.filter( book => {
+                return book.nume.toUpperCase().includes(text.toUpperCase()); 
+            });
+            updateContent(filtredBooks);
+        });     
     </script>
 </body>
 
