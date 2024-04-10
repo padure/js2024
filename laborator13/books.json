@@ -19,5 +19,26 @@
     "autor": "Will Smith",
     "pagini": 254,
     "an": 2015
+  },
+  {
+    "nume": "Inteligenta Artificiala for Developers",
+    "autor": "John Doe",
+    "pagini": "234",
+    "an": "2024",
+    "id": "4147c773-cf4b-4bda-9b69-c58a35d95867"
+  },
+  {
+    "nume": "Inteligenta Artificiala for Students",
+    "autor": "John Ali",
+    "pagini": "110",
+    "an": "2024",
+    "id": "b10ea171-80f0-4e0e-b38c-4d57daf9402b"
+  },
+  {
+    "nume": "Space",
+    "autor": "John Doe",
+    "pagini": "119",
+    "an": "2019",
+    "id": "7324e4a5-36c7-4b3d-b8cd-d872588859bc"
   }
 ]

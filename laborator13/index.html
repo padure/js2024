@@ -10,9 +10,14 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container">
-            <a class="navbar-brand">Biblioteca</a>
+            <a href="index.html" class="navbar-brand">Biblioteca</a>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="create.html">Create</a>
+                </div>
+            </div>
             <form class="d-flex" role="search" id="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
@@ -47,14 +52,14 @@
         }
         const main = async () => {
             const books = await getBooks();
-            books.map( book => {
+            books.map((book, index) => {
                 tableElement.innerHTML += `<tr>
-                    <td>${book.id}</td>
+                    <td>${index + 1}</td>
                     <td>${book.nume}</td>
                     <td>${book.autor}</td>
                     <td>${book.pagini}</td>
                     <td>${book.an}</td>
-                </tr>`; 
+                </tr>`;
             });
         }
         main();     
