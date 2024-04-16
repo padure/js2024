@@ -29,10 +29,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
-                    <h6>Filtreaza cartile</h6>
+                    <h6 class="my-4">Filtreaza cartile</h6>
                     <form action="#" method="post" id="filter-books">
-                        
-                        <button type="submit" class="btn btn-dark btn-sm">Filter</button>
+            
                     </form>
                 </div>
                 <div class="col-lg-10">
@@ -90,14 +89,15 @@
         const buildFilterForm = (authors) => {
             authors.map( (author, index) => {
                 filterBooks.innerHTML += `<div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="${author}" id="check-${index}">
+                    <input class="form-check-input" type="checkbox" value="${author}" id="check-${index}" name="autor">
                     <label class="form-check-label" for="check-${index}"">
                         ${author}
                     </label>
                 </div>`;
             });
+            filterBooks.innerHTML += `<button type="submit" class="btn btn-dark btn-sm">Filter</button>`;
         }
-        
+
         const main = async () => {
             const books = await getBooks();
             const uniqueAuthors = await getUniqueAuthors();
@@ -115,10 +115,16 @@
             updateContent(filtredBooks);
         });
 
-        filterBooks.addEventListener('submit', (e) => {
+        filterBooks.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const autors = [...e.target.autor].filter(element => element.checked);
-            autors.forEach(autor => console.log(autor.value));
+            const autors = [];
+            const autorsElements = [...e.target.autor].filter(element => element.checked);
+            autorsElements.forEach(autor => autors.push(autor.value));
+            const books = await getBooks();
+            const filteredBooks = books.filter( book => {
+                return autors.includes(book.autor);
+            });
+            updateContent(filteredBooks);
         });
 
     </script>
