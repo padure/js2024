@@ -11,6 +11,7 @@ block content
           th Autor
           th Pagini
           th Pret
+          th Optiuni
       tbody
         each book in books
           tr 
@@ -19,3 +20,6 @@ block content
             td #{book.autor}
             td #{book.pagini}
             td #{book.pret}
+            td
+              a.btn.btn-danger.btn-sm.me-1(href='/carti/id:') Delete
+              a.btn.btn-warning.btn-sm.text-white(href='/carti/edit/id:') Edit
