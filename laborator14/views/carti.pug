@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container.my-5  
+    h3 Lista cartilor
+    table.table.table-bordered.table-hover
+      thead 
+        tr 
+          th #
+          th Nume
+          th Autor
+          th Pagini
+          th Pret
+      tbody
+        each book in books
+          tr 
+            td #{book.id}
+            td #{book.nume}
+            td #{book.autor}
+            td #{book.pagini}
+            td #{book.pret}
